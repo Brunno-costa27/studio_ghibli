@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+:root {
+    --white: #f9f9f9;
+    --green: #658E76;
+    --green-dark: #5d866e;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 68.5%;
+    }
+}
+
+body {
+    background: linear-gradient(130.02deg, #628E76 .66%, #1A4855 83.32%);
+    min-height: 100vh;
+}
+
+h1, h2, h3, p, span, button, a {
+    color: var(--white);
+}
+
+/* Estilo para o container */
+.container {
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 14px 25px;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+/* Estilos dos links */
+.links {
+    display: flex;
+    gap: 28px;
+    cursor: pointer;
+}
+
+.links li svg {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+li, a{
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Estilos do wrapper */
+/* Quando a largura da tela for maior ou igual a 768px */
+@media (min-width: 768px) {
+    .wrapper {
+        height: calc(100vh - 10rem);
+    }
+}
+
+/* Estilos da div MainContent */
+.MainContent {
+    height: 100%;
+    padding: 20px 25px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Quando a largura da tela for maior ou igual a 768px */
+@media (min-width: 768px) {
+    .MainContent {
+        flex-direction: row-reverse;
+        gap: 2rem;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+}
+/* Quando a largura da tela for maior ou igual a 768px */
+@media (min-width: 1024px) {
+    .MainContent {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+/* Quando a largura da tela for maior ou igual a 768px */
+@media (min-width: 1300px) {
+    .MainContent {
+        max-width: 1300px;
+    }
+}
+
+/* Estilo ilustration do elemento imagem */
+
+@media (min-width: 1024px) {
+    .MainContent .ilustration {
+        max-width: 50rem;
+    }
+}
+
+/* @media (min-width: 768px) {
+    .MainContent .ilustration {
+        max-width: 35rem;
+    }
+} */
+
+.MainContent .ilustration {
+    width: 100%;
+    animation: bounce 4s infinite;
+}
+/* Criando uma animação com o elemento img */
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos do elementos intro */
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;   
+    animation: fade-intro 1s;
+}
+
+.intro .title {
+    display: flex;
+    flex-direction: column;
+    font-size: 5.6rem;
+    line-height: 6rem;
+    font-weight: 900;
+    max-width: 35rem;    
+}
+
+.intro .title span {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    letter-spacing: .03rem;
+    text-transform: uppercase;
+}
+
+@keyframes fade-intro {
+    0% {
+        opacity: 0;
+        transform: translateY(40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@media (min-width: 768px){
+    .MainContent .intro {
+        max-width: 47rem;
+    }
+}
+
+.intro span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    margin-top: 5px;
+}
+
+.intro .button-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 1080px) {
+    .intro .button-box {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+.intro .button-box a{
+    width: 100%;
+    border: 2px solid var(--green);
+    padding: 1rem;
+    transform: skew(-15deg);
+    transition: all .2s ease-in-out;
+}
+
+/* O primeiro elemento tem uma cor de fundo diferente */
+.intro .button-box a:first-child {
+    background: var(--green);
+}
+
+.intro .button-box a span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transform: skew(15deg);
+    text-transform: uppercase;
+}
+
+.intro .button-box a:last-child:hover{
+    border-color: var(--green-dark);
+}
+
+.modal-video {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    z-index: 1000000;
+    cursor: pointer;
+    opacity: 1;
+    transition: fade .3s ease-in-out;
+}
+
+.modal-video-body {
+    max-width: 960px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.modal-video-inner {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+@media (orientation: landscape) {
+    .modal-video-inner {
+        padding: 10px 60px;
+        box-sizing: border-box;
+    }
+}
+
+.modal-video-movie-wrap {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    background-color: #333;
+    animation-timing-function: ease-out;
+    animation-duration: .3s;
+    animation-name: modal-video-inner;
+    transform: translate(0);
+    transform: fade .3s ease-out;
+}
+
+
+.modal-video-close-btn {
+    position: absolute;
+    z-index: 2;
+    top: -45px;
+    right: 0;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+@media (orientation: landscape) {
+    .modal-video-close-btn {
+        top: 0;
+        right: -45px;
+    }
+}
+
+.modal-video-close-btn:before, .modal-video-close-btn:after {
+    content: "";  
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: -6px;
+}
+
+.modal-video-close-btn:before {
+    transform: rotate(45deg);
+}
+
+.modal-video-close-btn:after {
+    transform: rotate(-45deg);
+}
+
+.modal-video-movie-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@keyframes modal-video-inner {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+

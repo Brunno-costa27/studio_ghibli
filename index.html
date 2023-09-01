@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Studio Ghibli</title>
+</head>
+
+<body>
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Container com uma imagem e lista com redes sociais -->
+        <div class="container">
+            <img src="https://desafio05-studio-ghibli.vercel.app/assets/logo.37e05ac0.svg" alt="Studio Ghibli"
+                width="100">
+            <ul class="links">
+                <li>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </li>
+                <li>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </li>
+                <li>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                </li>
+                <li>
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                        </path>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+
+        <div class="modal-video" id="videoModal" role="dialog">
+            <div class="modal-video-body">
+                <div class="modal-video-inner">
+                    <div class="modal-video-movie-wrap">
+                        <button class="modal-video-close-btn" id="closeModal"></button>
+                        <iframe id="videoFrame" width="460" height="230"
+                            src="//www.youtube.com/embed/ByXuk9QqQkk?autoplay=1&cc_load_policy=1&controls=1&disablekb=0&enablejsapi=0&fs=1&iv_load_policy=1&loop=0&rel=0&showinfo=1&start=0&wmode=transparent&theme=dark&mute=0"
+                            frameborder="0" allowfullscreen
+                            allow='accelerometer; autoplay; encrypted-media, gyroscope; picture-in-picture'
+                            tabindex="-1"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <!-- Aqui vai o conteúdo principal -->
+            <div class="MainContent">
+                <!-- Imagem ilustrativa -->
+                <img class="ilustration" src="https://desafio05-studio-ghibli.vercel.app/assets/ilustracao.cb1ccd1a.png"
+                    alt="iluistration">
+                <!-- Conteúdo textual -->
+                <div class="intro">
+                    <h1 class="title">
+                        <span>HAYAO MIYAZAKI</span>
+                        A VIAGEM DE CHIHIRO
+                    </h1>
+
+                    <span>
+                        Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles que a desobedecem são
+                        transformados em animais.
+                    </span>
+
+                    <!-- Botões para assitir ao trailer -->
+                    <div class="button-box">
+                        <a href="https://www.netflix.com/br/title/60023642" target="_blank">
+                            <span>
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                    stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                                Assistir agora
+                            </span>
+                        </a>
+
+                        <a href="#" id="openModal">
+                            <span>Assista ao trailer</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/scripts/script.js"></script>
+</body>
+
+</html>
